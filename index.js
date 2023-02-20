@@ -1,5 +1,13 @@
 // BEFORE JUDGING ME, Just keep in mind the fact that i made this in single night for fun... and I didn't write code... I PLAYED WITH IT!
 
+// version 1.0.0 === Since this version is not very fun on touch devices, here's a code block to inform the users about it
+
+const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if (isMobile) {
+    alert("The Current Version is not very interactive for touch-screen devices, I'm working on it :D")
+}
+
+
 const h1 = document.querySelector('h1')
 const fancy =document.querySelector('.fancy')
 const dontBtn = document.querySelector('.dont-btn')
@@ -142,15 +150,11 @@ document.addEventListener("mousemove", (e) => {
 // MISC
 
 window.addEventListener("load", () => {
+
+    // arranging hidden links randomly
     links.forEach(el => {
         const xRandom = Math.random() * (window.innerWidth - el.offsetWidth)
         const yRandom = Math.random() * (window.innerHeight - el.offsetHeight)
-
-        // el.style.left = `${xRandom}px`
-        // el.style.top = `${yRandom}px`
-
         el.style.translate = `${xRandom}px ${yRandom}px`
-
-        console.log(el)
     })
 })
