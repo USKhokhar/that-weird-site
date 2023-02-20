@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Tourney:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    /* Colors */
+    --black: #000;
+    --white: #fff;
+    --orange: #FF5200;
+    --blue: #003355;
+    --blue-x: #04536C;
+    --gray: #ADACA7;
+
+    /* FONTS */
+    --primary-font: 'Bebas Neue',
+        cursive;
+    --secondary-font: 'Tourney',
+        cursive;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* BREAKPOINTS */
+@media only screen and (max-width: 768px) {
+    * {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    * {
+        font-size: 12px;
+    }
+}
+
+/* BODY */
+body {
+    background: var(--blue);
+    overflow: hidden;
+}
+
+/* TYPOGRAPHY */
+h1 {
+    font: normal 600 3rem/4rem var(--primary-font);
+    text-align: center;
+    color: var(--blue-x);
+    cursor: default;
+    transition: 350ms ease-in-out;
+    word-spacing: 1rem;
+}
+
+h1:hover {
+    cursor: none;
+}
+
+.fancy {
+    font: normal 400 3rem/3rem var(--secondary-font);
+    color: var(--orange);
+    opacity: 0.6;
+}
+
+.random-link {
+    text-decoration: none;
+    font-size: 6rem;
+    color: var(--blue);
+    transition: 300ms;
+    z-index: -1;
+
+    position: absolute;
+}
+
+.gpt,
+.yt-list,
+.music-list {
+    filter: opacity(0);
+}
+
+.random-link:hover {
+    color: var(--blue-x);
+    transform: scale(1.2);
+    filter: opacity(1);
+}
+
+/* SECTIONS */
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 80%;
+}
+
+/* CONTAINERS */
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* BUTTONS */
+.btn-container button {
+    font: normal 300 1.5rem/1.5rem var(--primary-font);
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border: none;
+    background: var(--blue-x);
+    color: var(--gray);
+    cursor: pointer;
+
+    display: none;
+}
+
+.loop-btn {
+    margin: auto;
+}
+
+/* BALLS */
+.foot-ball {
+    width: 2rem;
+    aspect-ratio: 1;
+    background: var(--orange);
+    border-radius: 8px;
+    opacity: 0.8;
+    box-shadow: var(--blue-x) 0.5rem 0.5rem 1rem;
+
+    position: absolute;
+    bottom: 1rem;
+}
+
+/* NAVBAR */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0.5rem 1rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+.fa-brands,
+.fa-solid {
+    font-size: 2rem;
+    color: var(--blue-x);
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.fa-brands:hover,
+.fa-solid:hover,
+.usk:hover {
+    filter: contrast(40%);
+    cursor: none;
+    transform: scale(1.5);
+}
+
+.usk {
+    font: normal 300 2rem/2rem var(--secondary-font);
+    color: var(--blue-x);
+    cursor: none;
+}
