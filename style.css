@@ -66,16 +66,11 @@ h1:hover {
     text-decoration: none;
     font-size: 6rem;
     color: var(--blue);
+    filter: opacity(0);
     transition: 300ms;
     z-index: -1;
 
     position: absolute;
-}
-
-.gpt,
-.yt-list,
-.music-list {
-    filter: opacity(0);
 }
 
 .random-link:hover {
